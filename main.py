@@ -34,7 +34,7 @@ def report():
         else:
             jobs = get_indeed_jobs(word)
             db[word] = jobs
-            print(jobs)
+            # print(jobs)
     else:
         return redirect("/")
     return render_template("report.html", searchingBy=word, resultsNumber=len(jobs), jobs=jobs) # rendering

@@ -25,7 +25,9 @@
                 <span>{{job.title}}</span>
                 <span>{{job.company}}</span>
                 <span>{{job.location}}</span>
-                <a href="{{job.link}}" target="_black">Apply</a>
+                <a href="{{job.link}}" target="_black">
+                    {% if job.link %}Apply{% endif %}
+                </a>
             {% endfor %}
         </section>
     </body>
